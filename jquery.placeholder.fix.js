@@ -33,7 +33,7 @@
 //
 (function($){
   $.fn.placeholder = function(options) {
-
+    var opts = $.extend({}, $.fn.placeholder.defaults, options);
     var support = true;
     //have placeholder support?
     //create a new input and check if has placeholder attribute
@@ -43,9 +43,10 @@
       support = false;
     }
 
-    //if there is no support to placeholder attribute, apply the fix
-    if(!support){
-      return $('[placeholder]', this).each(function() {
+    //if there is no support to placeholder attribute, 
+    //or force option true apply the fix
+    if(!support || opts.force){
+      return $('[placeholder]',this).each(function() {
         //on the focus event, clean the placeholder value
         //if is blank, turn the placeholder on again
         $(this).focus(function() {
@@ -74,5 +75,10 @@
       });
     }
   };
+  
+  $.fn.placeholder.defaults = {
+    force: false //force to use plugin placeholder
+  };
+
 })(jQuery);
 
