@@ -33,11 +33,11 @@
         <input type="text" name="basic_field" id="basic_field" placeholder="Basic Placeholder" /> 
       </fieldset>
     </form>
-    <code>
+    <pre>
       $(document).ready(function(){
         $('form#basic').placeholder();  
       });
-    </code>
+    </pre>
     <h2>Force placeholder</h2>
     <p>It will force the placeholder even if the browser have support.</p>
     <form action="" id="force" accept-charset="utf-8">
@@ -45,13 +45,13 @@
         <input type="text" name="force_field" id="force_field" placeholder="Force Placeholder" /> 
       </fieldset>
     </form>
-    <code>
+    <pre>
       $(document).ready(function(){
         $('form#force').placeholder({
           force: true  
         });  
       });
-    </code>
+    </pre>
     <h2>Add styles to the placeholder</h2>
     <p>
       It will add the class placeholder to the fields. You can style your placeholder
@@ -62,7 +62,7 @@
         <input type="text" name="style_field" id="style_field" placeholder="Style Placeholder" /> 
       </fieldset>
     </form>
-    <code>
+    <pre>
       //javascript
       $(document).ready(function(){
         $('form#color').placeholder({
@@ -75,6 +75,6 @@
         color: #f00;
         font-style: italic;
       }
-    </code>
+    </pre>
   </body>
 </html>
