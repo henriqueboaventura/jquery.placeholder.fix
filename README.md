@@ -20,7 +20,7 @@ Below, let's add the plugin:
     
     <script type="text/javascript" src="jquery.placeholder.fix.js"></script>
 
-The plugin call can be made in several ways:
+The plugin's call can be made in several ways:
 - To a specific form;
 - To a specific field;
 - For all inputs and textareas of the document.
@@ -47,7 +47,7 @@ Now, just create your form, like you always do, adding the placeholder attribute
 
 Options
 -------
-The plugin has the option to force the plugin to render the placeholder, even
+The plugin has the option to force to render the placeholder through it, even
 if the browser has placeholder support:
 
     $(document).ready(function(){
