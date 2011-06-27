@@ -10,6 +10,7 @@ applying only when necessary (or forcing through "force" option).
 Usage
 -----
 To use the plugin, first we need to add the jQuery lib to our page:
+
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js">    </script>
 
 *Note that I'm using Google's CDN to avoid local bandwidth consume, but nothing prevents you
