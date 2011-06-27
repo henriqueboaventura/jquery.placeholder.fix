@@ -74,4 +74,4 @@ input.placeholder{
 TODO
 ----
 - Adicionar placeholder aos campos do tipo password
-
+- Adicionar opção de esconder o label relacionado ao input
