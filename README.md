@@ -1,54 +1,53 @@
 jQuery Placeholder Fix
 ======================
 
-Este plugin visa adicionar o atributo placeholder a browsers que não tenham suporte a ele,
-renderizando corretamente.
-O plugin se encarrega de verificar se o browser tem suporte ou não ao atributo placeholder,
-aplicando-o o somente quando necessário (ou forçando usando a opção "force").
+This plugin aims to add the placeholder attribute to browsers that not support this feature, 
+rendering just like there was support.
 
-Uso
----
-Para usar o plugin, primeiramente, precisamos adicionar o jQuery a nossa página, da seguinte maneira:
+The plugin is responsible for check if the browser supports or not the placeholder attribute, 
+applying only when necessary (or forcing through "force" option).
 
+Usage
+-----
+To use the plugin, first we need to add the jQuery lib to our page:
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js">    </script>
 
-*Note que estou utilizando a CDN do google, para evitar consumo local de banda no carregamento do jQuery, mas
-nada impede que você utilize uma versão local dele, basta substituir.
+*Note that I'm using Google's CDN to avoid local bandwidth consume, but nothing prevents you
+to use a local version o jQuery, just change the URL.
 
-Logo abaixo, vamos adicionar o plugin:
+Below, let's add the plugin:
     
     <script type="text/javascript" src="jquery.placeholder.fix.js"></script>
 
-A chamada para o plugin pode ser feita de diversas maneiras:
-- Para um formulário especifico;
-- Para um campo especifico;
-- Para todos os inputs e textarea do documento.
-Para isso, é só usar o seletor desejado:
+The plugin call can be made in several ways:
+- To a specific form;
+- To a specific field;
+- For all inputs and textareas of the document.
+It's just use the right selector:
     <script type="text/javascript">
         $(document).ready(function(){
             $(this).placeholder();
         });
     </script>
 
-
-Agora, é só criar um formulário normalmente, com o atributo placeholder nos campos:
+Now, just create your form, like you always do, adding the placeholder attribute in the fields:
 
     <form action="#" method="get">
         <fieldset>
-            <legend>Contato</legend>
-            <label for="contato_nome">Nome</label>
-            <input type="text" name="contato_nome" id="contato_nome" placeholder="Nome" />
-            <label for="contato_email">E-mail</label>
-            <input type="text" name="contato_email" id="contato_email" placeholder="E-mail" />
-            <label for="contato_mensagem">Mensagem</label>
-            <textarea name="contato_mensagem" id="contato_mensagem" placeholder="Mensagem" /></textarea>
+            <legend>Contact</legend>
+            <label for="contact_name">Name</label>
+            <input type="text" name="contact_name" id="contact_name" placeholder="Name" />
+            <label for="contact_email">E-mail</label>
+            <input type="text" name="contact_email" id="contact_email" placeholder="E-mail" />
+            <label for="contact_message">Message</label>
+            <textarea name="contact_message" id="contact_message" placeholder="Message" /></textarea>
         </fieldset>
     </form>
 
-Opções
-------
-O plugin tem a opção se sempre forçar o uso do plugin para renderizar o placeholder,
-sobrescrevendo a verificação que o plugin faz:
+Options
+-------
+The plugin has the option to force the plugin to render the placeholder, even
+if the browser has placeholder support:
 
     $(document).ready(function(){
       $(this).placeholder({
@@ -56,10 +55,9 @@ sobrescrevendo a verificação que o plugin faz:
       });
     });
 
-Estilização
+Styling
 -----------
-A classe "placeholder" é adicionada a todos os campos que o plugin ativar o placeholder,
-facilitando a estilização:
+Each field that use the plugin, has the class "placeholder" when it's empty, getting easier to style:
 
     input.placeholder{
       color:#ccc;
@@ -68,5 +66,5 @@ facilitando a estilização:
 
 TODO
 ----
-- Adicionar placeholder aos campos do tipo password
-- Adicionar opção de esconder o label relacionado ao input
+- Add support to password input type;
+- Add option to hide field label;
