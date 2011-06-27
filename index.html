@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"0>
     <title>jQuery Placeholder Fix - Test Case</title>
-    <script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.placeholder.fix.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
@@ -13,7 +13,7 @@
         });
         $('form#style').placeholder({
           force: true
-        });  
+        });
       });
     </script>
     <style type="text/css" media="screen">
@@ -22,7 +22,7 @@
         font-style: italic;
       }
     </style>
-    
+
   </head>
   <body>
     <h1>jQuery Placeholder Fix - Test Case</h1>
@@ -30,46 +30,44 @@
     <p>It will only apply the placeholder fix if the browser have no support to the placeholder attribute.</p>
     <form action="#" method="get" id="basic">
       <fieldset>
-        <input type="text" name="basic_field" id="basic_field" placeholder="Basic Placeholder" /> 
+        <input type="text" name="basic_field" id="basic_field" placeholder="Basic Placeholder" />
       </fieldset>
     </form>
     <pre>
       $(document).ready(function(){
-        $('form#basic').placeholder();  
+        $('form#basic').placeholder();
       });
     </pre>
     <h2>Force placeholder</h2>
     <p>It will force the placeholder even if the browser have support.</p>
     <form action="" id="force" accept-charset="utf-8">
       <fieldset>
-        <input type="text" name="force_field" id="force_field" placeholder="Force Placeholder" /> 
+        <input type="text" name="force_field" id="force_field" placeholder="Force Placeholder" />
       </fieldset>
     </form>
     <pre>
       $(document).ready(function(){
         $('form#force').placeholder({
-          force: true  
-        });  
+          force: true
+        });
       });
     </pre>
     <h2>Add styles to the placeholder</h2>
     <p>
       It will add the class placeholder to the fields. You can style your placeholder
-      in the CSS file. 
+      in the CSS file.
     </p>
     <form action="" id="style" accept-charset="utf-8">
       <fieldset>
-        <input type="text" name="style_field" id="style_field" placeholder="Style Placeholder" /> 
+        <input type="text" name="style_field" id="style_field" placeholder="Style Placeholder" />
       </fieldset>
     </form>
     <pre>
       //javascript
       $(document).ready(function(){
-        $('form#color').placeholder({
-          force: trie           
-        });  
+        $('form#color').placeholder();
       });
-      
+
       //css
       input.placeholder{
         color: #f00;
@@ -78,3 +76,4 @@
     </pre>
   </body>
 </html>
+
