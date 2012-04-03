@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Jquery.placeholder.fix : Fix to add the placeholder attribute to old browsers" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Jquery.placeholder.fix</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/kidh0/jquery.placeholder.fix">Fork Me on GitHub</a>
+
+          <h1 id="project_title">Jquery.placeholder.fix</h1>
+          <h2 id="project_tagline">Fix to add the placeholder attribute to old browsers</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/kidh0/jquery.placeholder.fix/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/kidh0/jquery.placeholder.fix/tarball/master">Download this project as a tar.gz file</a>
+          </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>jQuery Placeholder Fix</h1>
+
+<p>This plugin aims to add the placeholder attribute to browsers that not support this feature, rendering just like there was support.</p>
+
+<p>The plugin is responsible for check if the browser supports or not the placeholder attribute, applying only when necessary (or forcing through "force" option).</p>
+
+<h2>Usage</h2>
+
+<p>To use the plugin, first we need to add the jQuery lib to our page:</p>
+
+<p><code>&lt;script type="text/javascript" src="<a href="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js">http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js</a>"&gt;    &lt;/script&gt;</code></p>
+
+<p>*Note that I'm using Google's CDN to avoid local bandwidth consume, but nothing prevents you to use a local version o jQuery, just change the URL.</p>
+
+<p>Below, let's add the plugin:</p>
+
+<p>The plugin's call can be made in several ways: - To a specific form; - To a specific field; - For all inputs and textareas of the document. It's just use the right selector: $(document).ready(function(){ $(this).placeholder(); });</p>
+
+<p>Now, just create your form, like you always do, adding the placeholder attribute in the fields:</p>
+
+<p><code>&lt;form action="#" method="get"&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Contact&lt;/legend&gt;
+        &lt;label for="contact_name"&gt;Name&lt;/label&gt;
+        &lt;input type="text" name="contact_name" id="contact_name" placeholder="Name" /&gt;
+        &lt;label for="contact_email"&gt;E-mail&lt;/label&gt;
+        &lt;input type="text" name="contact_email" id="contact_email" placeholder="E-mail" /&gt;
+        &lt;label for="contact_message"&gt;Message&lt;/label&gt;
+        &lt;textarea name="contact_message" id="contact_message" placeholder="Message" /&gt;&lt;/textarea&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;</code></p>
+
+<h2>Options</h2>
+
+<p>The plugin has the option to force to render the placeholder through it, even if the browser has placeholder support:</p>
+
+<p><code>$(document).ready(function(){
+  $(this).placeholder({
+    force: true
+  });
+});</code></p>
+
+<h2>Styling</h2>
+
+<p>Each field that use the plugin, has the class "placeholder" when it's empty, getting easier to style:</p>
+
+<p><code>input.placeholder{
+  color:#ccc;
+  font-style:italic;
+}</code> </p>
+
+<h2>TODO</h2>
+
+<ul>
+<li>Add support to password input type;</li>
+<li>Add option to hide field label;</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Jquery.placeholder.fix maintained by <a href="https://github.com/kidh0">kidh0</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
